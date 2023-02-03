@@ -41,7 +41,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white
+    @apply bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white !important
   }
   a:hover {
     @apply text-black dark:text-white transition-colors duration-300;
