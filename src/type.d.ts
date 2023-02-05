@@ -63,6 +63,8 @@ type TrailerVideo = {
   type: string;
 };
 
+type Bookmark = Pick<BaseMovie, 'id' | 'title' | 'poster_path'>;
+
 type Movie = BaseMovie & {
   genre_ids: number[];
 };

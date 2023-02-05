@@ -11,12 +11,12 @@ export const useQueryMeta = <T = unknown>(initialState: T) => {
   );
 
   useEffect(() => {
-    if (router.isReady && !isFirst) {
+    if (router.isReady) {
       // @ts-ignore
       setQuery({ ...router.query });
       toggleFirst(true);
     }
-  }, [isFirst, router.isReady, router.query]);
+  }, [router.isReady, router.query]);
 
   const updateQuery = (newState: Partial<T>) => {
     setQuery(newState);

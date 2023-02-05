@@ -14,11 +14,10 @@ const Trailer: React.FC<{ data?: TrailerVideo[] }> = ({ data }) => {
           <iframe
             width="560"
             height="315"
-            allowFullScreen
             title="YouTube video player"
-            src={`https://www.youtube.com/embed/${data[0].key}`}
             className="absolute top-0 left-0 w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            src={`https://www.youtube.com/embed/${data[0].key}`}
+            sandbox="allow-scripts allow-same-origin allow-presentation"
           />
         ) : (
           <div className="absolute left-0 top-0 animate-pulse bg-gray-300 w-full h-full" />
